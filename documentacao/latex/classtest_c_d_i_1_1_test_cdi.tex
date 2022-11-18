@@ -1,0 +1,155 @@
+\hypertarget{classtest_c_d_i_1_1_test_cdi}{}\doxysection{test\+CDI.\+Test\+Cdi Class Reference}
+\label{classtest_c_d_i_1_1_test_cdi}\index{testCDI.TestCdi@{testCDI.TestCdi}}
+Inheritance diagram for test\+CDI.\+Test\+Cdi\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classtest_c_d_i_1_1_test_cdi}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classtest_c_d_i_1_1_test_cdi_a9ceacd5b56415260498be939b1329388}{test\+\_\+rentabilidade}} (self)
+\item 
+def \mbox{\hyperlink{classtest_c_d_i_1_1_test_cdi_a2687615f8658b2aefce699a2cda23649}{test\+\_\+rentabilidade\+Com\+Impostos}} (self)
+\item 
+def \mbox{\hyperlink{classtest_c_d_i_1_1_test_cdi_a95ff7daf5f8ca2190fc23cb191f15f00}{test\+\_\+aplicar\+Imposto\+Renda}} (self)
+\item 
+def \mbox{\hyperlink{classtest_c_d_i_1_1_test_cdi_a16bfacf388736b5d6d7d388fc42099ac}{test\+\_\+montante\+Liquido\+Aplicacao}} (self)
+\item 
+def \mbox{\hyperlink{classtest_c_d_i_1_1_test_cdi_abff379b8c28d820086dec1f5d2cd3ae5}{test\+\_\+liquido\+Bruto}} (self)
+\item 
+def \mbox{\hyperlink{classtest_c_d_i_1_1_test_cdi_a672ead44286658dc408165a90a527d02}{test\+\_\+check\+Rend\+Poupanca}} (self)
+\item 
+def \mbox{\hyperlink{classtest_c_d_i_1_1_test_cdi_a770f41aeaa3ad39523ef3bc08f5adc41}{rendimento\+Poupanca}} (self)
+\item 
+def \mbox{\hyperlink{classtest_c_d_i_1_1_test_cdi_a4b0c2bb82329853d455a842f65900e64}{porcen\+Difenca\+Em\+Meses}} (self)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtest_c_d_i_1_1_test_cdi_a4b0c2bb82329853d455a842f65900e64}\label{classtest_c_d_i_1_1_test_cdi_a4b0c2bb82329853d455a842f65900e64}} 
+\index{testCDI.TestCdi@{testCDI.TestCdi}!porcenDifencaEmMeses@{porcenDifencaEmMeses}}
+\index{porcenDifencaEmMeses@{porcenDifencaEmMeses}!testCDI.TestCdi@{testCDI.TestCdi}}
+\doxysubsubsection{\texorpdfstring{porcenDifencaEmMeses()}{porcenDifencaEmMeses()}}
+{\footnotesize\ttfamily def test\+CDI.\+Test\+Cdi.\+porcen\+Difenca\+Em\+Meses (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{40     \textcolor{keyword}{def }porcenDifencaEmMeses(self):}
+\DoxyCodeLine{41         self.assertEqual(\mbox{\hyperlink{namespacecdi_acc1acbd719178ad753dd33359907944c}{cdi.porcenDifencaEmMeses}}(1000, 1007.49, 1005),}
+\DoxyCodeLine{42         0.7487, 2.49)}
+\DoxyCodeLine{43         }
+\DoxyCodeLine{44 }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classtest_c_d_i_1_1_test_cdi_a770f41aeaa3ad39523ef3bc08f5adc41}\label{classtest_c_d_i_1_1_test_cdi_a770f41aeaa3ad39523ef3bc08f5adc41}} 
+\index{testCDI.TestCdi@{testCDI.TestCdi}!rendimentoPoupanca@{rendimentoPoupanca}}
+\index{rendimentoPoupanca@{rendimentoPoupanca}!testCDI.TestCdi@{testCDI.TestCdi}}
+\doxysubsubsection{\texorpdfstring{rendimentoPoupanca()}{rendimentoPoupanca()}}
+{\footnotesize\ttfamily def test\+CDI.\+Test\+Cdi.\+rendimento\+Poupanca (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{36     \textcolor{keyword}{def }rendimentoPoupanca(self):}
+\DoxyCodeLine{37         self.assertEqual(\mbox{\hyperlink{namespacecdi_ae2aa02e5f5d2199e52ae82f7fbcb1644}{cdi.rendimentoPoupanca}}(1000, 6.17, 1), 1005)}
+\DoxyCodeLine{38         self.assertEqual(\mbox{\hyperlink{namespacecdi_ae2aa02e5f5d2199e52ae82f7fbcb1644}{cdi.rendimentoPoupanca}}(1100, 6.17, 2), 1011.03)}
+\DoxyCodeLine{39 }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classtest_c_d_i_1_1_test_cdi_a95ff7daf5f8ca2190fc23cb191f15f00}\label{classtest_c_d_i_1_1_test_cdi_a95ff7daf5f8ca2190fc23cb191f15f00}} 
+\index{testCDI.TestCdi@{testCDI.TestCdi}!test\_aplicarImpostoRenda@{test\_aplicarImpostoRenda}}
+\index{test\_aplicarImpostoRenda@{test\_aplicarImpostoRenda}!testCDI.TestCdi@{testCDI.TestCdi}}
+\doxysubsubsection{\texorpdfstring{test\_aplicarImpostoRenda()}{test\_aplicarImpostoRenda()}}
+{\footnotesize\ttfamily def test\+CDI.\+Test\+Cdi.\+test\+\_\+aplicar\+Imposto\+Renda (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{15     \textcolor{keyword}{def }test\_aplicarImpostoRenda(self):}
+\DoxyCodeLine{16         self.assertEqual(\mbox{\hyperlink{namespacecdi_a6b29b43da9ce7e4a1712751dc14394c9}{cdi.aplicarImpostoRenda}}(1010, 1000, 22.5), 1007.75)}
+\DoxyCodeLine{17         self.assertEqual(\mbox{\hyperlink{namespacecdi_a6b29b43da9ce7e4a1712751dc14394c9}{cdi.aplicarImpostoRenda}}(1010, 1000, 17.5), 1008.25)}
+\DoxyCodeLine{18 }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classtest_c_d_i_1_1_test_cdi_a672ead44286658dc408165a90a527d02}\label{classtest_c_d_i_1_1_test_cdi_a672ead44286658dc408165a90a527d02}} 
+\index{testCDI.TestCdi@{testCDI.TestCdi}!test\_checkRendPoupanca@{test\_checkRendPoupanca}}
+\index{test\_checkRendPoupanca@{test\_checkRendPoupanca}!testCDI.TestCdi@{testCDI.TestCdi}}
+\doxysubsubsection{\texorpdfstring{test\_checkRendPoupanca()}{test\_checkRendPoupanca()}}
+{\footnotesize\ttfamily def test\+CDI.\+Test\+Cdi.\+test\+\_\+check\+Rend\+Poupanca (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{32     \textcolor{keyword}{def }test\_checkRendPoupanca(self):}
+\DoxyCodeLine{33         self.assertEqual(\mbox{\hyperlink{namespacecdi_a2b2273367c8552740195cb286e0c509b}{cdi.checkRendPoupanca}}(0.1325), [6.17,0.5])}
+\DoxyCodeLine{34         \textcolor{comment}{\#self.assertEqual(cdi.checkRendPoupanca(0.08), [5.6,0.643403011000343])}}
+\DoxyCodeLine{35 }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classtest_c_d_i_1_1_test_cdi_abff379b8c28d820086dec1f5d2cd3ae5}\label{classtest_c_d_i_1_1_test_cdi_abff379b8c28d820086dec1f5d2cd3ae5}} 
+\index{testCDI.TestCdi@{testCDI.TestCdi}!test\_liquidoBruto@{test\_liquidoBruto}}
+\index{test\_liquidoBruto@{test\_liquidoBruto}!testCDI.TestCdi@{testCDI.TestCdi}}
+\doxysubsubsection{\texorpdfstring{test\_liquidoBruto()}{test\_liquidoBruto()}}
+{\footnotesize\ttfamily def test\+CDI.\+Test\+Cdi.\+test\+\_\+liquido\+Bruto (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{25     \textcolor{keyword}{def }test\_liquidoBruto(self):}
+\DoxyCodeLine{26         self.assertEqual(\mbox{\hyperlink{namespacecdi_a5a91e0099d5022b47591d0020a15f007}{cdi.liquidoBruto}}(1000, 1, 93, 0.1315),}
+\DoxyCodeLine{27         1009.6610104767927)}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29         self.assertEqual(\mbox{\hyperlink{namespacecdi_a5a91e0099d5022b47591d0020a15f007}{cdi.liquidoBruto}}(1000, 1, 100, 0.0617),}
+\DoxyCodeLine{30         1005.0017502848112)}
+\DoxyCodeLine{31 }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classtest_c_d_i_1_1_test_cdi_a16bfacf388736b5d6d7d388fc42099ac}\label{classtest_c_d_i_1_1_test_cdi_a16bfacf388736b5d6d7d388fc42099ac}} 
+\index{testCDI.TestCdi@{testCDI.TestCdi}!test\_montanteLiquidoAplicacao@{test\_montanteLiquidoAplicacao}}
+\index{test\_montanteLiquidoAplicacao@{test\_montanteLiquidoAplicacao}!testCDI.TestCdi@{testCDI.TestCdi}}
+\doxysubsubsection{\texorpdfstring{test\_montanteLiquidoAplicacao()}{test\_montanteLiquidoAplicacao()}}
+{\footnotesize\ttfamily def test\+CDI.\+Test\+Cdi.\+test\+\_\+montante\+Liquido\+Aplicacao (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{19     \textcolor{keyword}{def }test\_montanteLiquidoAplicacao(self):}
+\DoxyCodeLine{20         self.assertEqual(\mbox{\hyperlink{namespacecdi_addb0dc08b609336db4af12d6070bf543}{cdi.montanteLiquidoAplicacao}}(}
+\DoxyCodeLine{21             1000, 1, 93, 22.5, 0.1315), 1007.4872831195144)}
+\DoxyCodeLine{22         self.assertEqual(\mbox{\hyperlink{namespacecdi_addb0dc08b609336db4af12d6070bf543}{cdi.montanteLiquidoAplicacao}}(}
+\DoxyCodeLine{23             1000, 2, 93, 22.5, 0.1315), 1015.046900959689)}
+\DoxyCodeLine{24 }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classtest_c_d_i_1_1_test_cdi_a9ceacd5b56415260498be939b1329388}\label{classtest_c_d_i_1_1_test_cdi_a9ceacd5b56415260498be939b1329388}} 
+\index{testCDI.TestCdi@{testCDI.TestCdi}!test\_rentabilidade@{test\_rentabilidade}}
+\index{test\_rentabilidade@{test\_rentabilidade}!testCDI.TestCdi@{testCDI.TestCdi}}
+\doxysubsubsection{\texorpdfstring{test\_rentabilidade()}{test\_rentabilidade()}}
+{\footnotesize\ttfamily def test\+CDI.\+Test\+Cdi.\+test\+\_\+rentabilidade (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5     \textcolor{keyword}{def }test\_rentabilidade(self):}
+\DoxyCodeLine{6         self.assertEqual(\mbox{\hyperlink{namespacecdi_adad598a732026cdaad314aac1041cb25}{cdi.rentabilidade}}(93, 13.15), 12.2295)}
+\DoxyCodeLine{7         self.assertEqual(\mbox{\hyperlink{namespacecdi_adad598a732026cdaad314aac1041cb25}{cdi.rentabilidade}}(50, 13.15), 6.575)}
+\DoxyCodeLine{8 }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classtest_c_d_i_1_1_test_cdi_a2687615f8658b2aefce699a2cda23649}\label{classtest_c_d_i_1_1_test_cdi_a2687615f8658b2aefce699a2cda23649}} 
+\index{testCDI.TestCdi@{testCDI.TestCdi}!test\_rentabilidadeComImpostos@{test\_rentabilidadeComImpostos}}
+\index{test\_rentabilidadeComImpostos@{test\_rentabilidadeComImpostos}!testCDI.TestCdi@{testCDI.TestCdi}}
+\doxysubsubsection{\texorpdfstring{test\_rentabilidadeComImpostos()}{test\_rentabilidadeComImpostos()}}
+{\footnotesize\ttfamily def test\+CDI.\+Test\+Cdi.\+test\+\_\+rentabilidade\+Com\+Impostos (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9     \textcolor{keyword}{def }test\_rentabilidadeComImpostos(self):}
+\DoxyCodeLine{10         self.assertEqual(\mbox{\hyperlink{namespacecdi_aa77d10a6363bb132fa35a44f4129f3c5}{cdi.rentabilida\_com\_impostos}}(93, 13.15,22.5), }
+\DoxyCodeLine{11         [72.075, 947.7862500000001])}
+\DoxyCodeLine{12         self.assertEqual(\mbox{\hyperlink{namespacecdi_aa77d10a6363bb132fa35a44f4129f3c5}{cdi.rentabilida\_com\_impostos}}(100, 13.15, 22.5), }
+\DoxyCodeLine{13         [77.5, 1019.125])}
+\DoxyCodeLine{14 }
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+AD1/\mbox{\hyperlink{test_c_d_i_8py}{test\+CDI.\+py}}\end{DoxyCompactItemize}

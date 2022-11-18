@@ -1,0 +1,463 @@
+\hypertarget{namespacecdi}{}\doxysection{cdi Namespace Reference}
+\label{namespacecdi}\index{cdi@{cdi}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{namespacecdi_a8328714d1771f15b835ec4467abb5336}{jc}} (float r, int t, int n=1)
+\item 
+float \mbox{\hyperlink{namespacecdi_aa808f680780e8795044fb7fafe93105f}{day2year}} (float d, int wd=252)
+\item 
+float \mbox{\hyperlink{namespacecdi_a91abac72d6b6011e6215408c5380d23f}{year2month}} (float a)
+\item 
+float \mbox{\hyperlink{namespacecdi_a6d04e3ff9de843a14c58019c89da6326}{double\+Principal}} (float r)
+\item 
+float \mbox{\hyperlink{namespacecdi_ae726f68f3496cf8f5073072fa80a04ab}{year2day}} (float a)
+\item 
+float \mbox{\hyperlink{namespacecdi_adad598a732026cdaad314aac1041cb25}{rentabilidade}} (float t, float a)
+\item 
+ \textquotesingle{}list\mbox{[}float\mbox{]}\textquotesingle{} \mbox{\hyperlink{namespacecdi_aa77d10a6363bb132fa35a44f4129f3c5}{rentabilida\+\_\+com\+\_\+impostos}} (float t, float a, float i)
+\item 
+float \mbox{\hyperlink{namespacecdi_a6b29b43da9ce7e4a1712751dc14394c9}{aplicar\+Imposto\+Renda}} (float montante, float c, float i)
+\item 
+float \mbox{\hyperlink{namespacecdi_addb0dc08b609336db4af12d6070bf543}{montante\+Liquido\+Aplicacao}} (float c, int m, float t, float i, float a)
+\item 
+float \mbox{\hyperlink{namespacecdi_a5a91e0099d5022b47591d0020a15f007}{liquido\+Bruto}} (float c, int m, float t, float a)
+\item 
+ \textquotesingle{}list\mbox{[}float\mbox{]}\textquotesingle{} \mbox{\hyperlink{namespacecdi_a2b2273367c8552740195cb286e0c509b}{check\+Rend\+Poupanca}} (float s)
+\item 
+float \mbox{\hyperlink{namespacecdi_ae2aa02e5f5d2199e52ae82f7fbcb1644}{rendimento\+Poupanca}} (float c, float p, int m)
+\item 
+ \textquotesingle{}list\mbox{[}float\mbox{]}\textquotesingle{} \mbox{\hyperlink{namespacecdi_a62c8188e99dc1b5b8281925735ba6886}{cdi\+Ao\+Mes\+Dia}} (float a)
+\item 
+ \textquotesingle{}list\mbox{[}float\mbox{]}\textquotesingle{} \mbox{\hyperlink{namespacecdi_acc1acbd719178ad753dd33359907944c}{porcen\+Difenca\+Em\+Meses}} (float c, float mont\+Aplica, float mont\+Poupan)
+\item 
+ \textquotesingle{}list\mbox{[}float\mbox{]}\textquotesingle{} \mbox{\hyperlink{namespacecdi_ac00b344b5f68fee133f7472ecef90c88}{dobra\+Capital}} (float taxa\+Juros)
+\item 
+def \mbox{\hyperlink{namespacecdi_a01d1af7e7956bc868161ad5f08809105}{help}} ()
+\item 
+float \mbox{\hyperlink{namespacecdi_a578948f3c14ee220f45a317dbd1eef13}{CDB}} (float c, float cdi, float p, float t, float i, int m=1)
+\item 
+def \mbox{\hyperlink{namespacecdi_a53c3e3f648a0d940f74b348c456e9ecd}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacecdi_a6b29b43da9ce7e4a1712751dc14394c9}\label{namespacecdi_a6b29b43da9ce7e4a1712751dc14394c9}} 
+\index{cdi@{cdi}!aplicarImpostoRenda@{aplicarImpostoRenda}}
+\index{aplicarImpostoRenda@{aplicarImpostoRenda}!cdi@{cdi}}
+\doxysubsubsection{\texorpdfstring{aplicarImpostoRenda()}{aplicarImpostoRenda()}}
+{\footnotesize\ttfamily  float cdi.\+aplicar\+Imposto\+Renda (\begin{DoxyParamCaption}\item[{float}]{montante,  }\item[{float}]{c,  }\item[{float}]{i }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{90 \textcolor{keyword}{def }aplicarImpostoRenda(montante: float, c: float, i: float) -\/> float:}
+\DoxyCodeLine{91     \textcolor{keywordflow}{return} montante -\/ ((montante -\/ c) * i / 100)}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93 \textcolor{comment}{\# metodo responsavel por calcular o montante liquido da aplicação}}
+\DoxyCodeLine{94 \textcolor{comment}{\# @param c é o capital investido}}
+\DoxyCodeLine{95 \textcolor{comment}{\# @param m é o periodo dado em meses}}
+\DoxyCodeLine{96 \textcolor{comment}{\# @param t é rendimento desda aplicação}}
+\DoxyCodeLine{97 \textcolor{comment}{\# @param i é o alíquota do imposto de renda}}
+\DoxyCodeLine{98 \textcolor{comment}{\# @return o montante líquido dessa aplicação no periodo informado}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacecdi_a578948f3c14ee220f45a317dbd1eef13}\label{namespacecdi_a578948f3c14ee220f45a317dbd1eef13}} 
+\index{cdi@{cdi}!CDB@{CDB}}
+\index{CDB@{CDB}!cdi@{cdi}}
+\doxysubsubsection{\texorpdfstring{CDB()}{CDB()}}
+{\footnotesize\ttfamily  float  cdi.\+CDB (\begin{DoxyParamCaption}\item[{float }]{c,  }\item[{float }]{cdi,  }\item[{float }]{p,  }\item[{float }]{t,  }\item[{float }]{i,  }\item[{int }]{m = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{186     i : float , m : int = 1) -\/> float :}
+\DoxyCodeLine{187     }
+\DoxyCodeLine{188     montante\_aplicacao = montanteLiquidoAplicacao(c, m, t, i, cdi)}
+\DoxyCodeLine{189     montante\_poupanca = rendimentoPoupanca(c, p, m)}
+\DoxyCodeLine{190     }
+\DoxyCodeLine{191     liq\_Bruto = liquidoBruto(c, m, t, cdi)     }
+\DoxyCodeLine{192     imposto = liq\_Bruto -\/ aplicarImpostoRenda(liq\_Bruto, c, i)}
+\DoxyCodeLine{193     rendi\_Meses, difer\_Meses\_Apl\_Pou = porcenDifencaEmMeses(c, montante\_aplicacao, montante\_poupanca)}
+\DoxyCodeLine{194 }
+\DoxyCodeLine{195     igualar\_Poup\_Cdi = p/(cdi * (1-\/(i/100)))     }
+\DoxyCodeLine{196 }
+\DoxyCodeLine{197     \textcolor{keywordflow}{return} igualar\_Poup\_Cdi, rendi\_Meses, difer\_Meses\_Apl\_Pou, imposto, montante\_aplicacao, montante\_poupanca}
+\DoxyCodeLine{198 }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacecdi_a62c8188e99dc1b5b8281925735ba6886}\label{namespacecdi_a62c8188e99dc1b5b8281925735ba6886}} 
+\index{cdi@{cdi}!cdiAoMesDia@{cdiAoMesDia}}
+\index{cdiAoMesDia@{cdiAoMesDia}!cdi@{cdi}}
+\doxysubsubsection{\texorpdfstring{cdiAoMesDia()}{cdiAoMesDia()}}
+{\footnotesize\ttfamily  \textquotesingle{}list\mbox{[}float\mbox{]}\textquotesingle{} cdi.\+cdi\+Ao\+Mes\+Dia (\begin{DoxyParamCaption}\item[{float}]{a }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{138 \textcolor{keyword}{def }cdiAoMesDia(a: float) -\/> \textcolor{stringliteral}{'list[float]'}:}
+\DoxyCodeLine{139     cdiAoMes = year2month(a)}
+\DoxyCodeLine{140     cdiAoDia = year2day(a)}
+\DoxyCodeLine{141     \textcolor{keywordflow}{return} cdiAoMes, cdiAoDia}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{143 \textcolor{comment}{\# metodo que é usado para calcular o rendimento no periodo,}}
+\DoxyCodeLine{144 \textcolor{comment}{\# e a diferença da aplicação e da poupança no mesmo periodo}}
+\DoxyCodeLine{145 \textcolor{comment}{\# @param c capital}}
+\DoxyCodeLine{146 \textcolor{comment}{\# @param montAplica é o montante liquido da aplicação}}
+\DoxyCodeLine{147 \textcolor{comment}{\# @param montPoupan é o montante liquido da poupança}}
+\DoxyCodeLine{148 \textcolor{comment}{\# @return rendimento no periodo(meses)em \% e , }}
+\DoxyCodeLine{149 \textcolor{comment}{\# e a diferença de rendimento em reais  }}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacecdi_a2b2273367c8552740195cb286e0c509b}\label{namespacecdi_a2b2273367c8552740195cb286e0c509b}} 
+\index{cdi@{cdi}!checkRendPoupanca@{checkRendPoupanca}}
+\index{checkRendPoupanca@{checkRendPoupanca}!cdi@{cdi}}
+\doxysubsubsection{\texorpdfstring{checkRendPoupanca()}{checkRendPoupanca()}}
+{\footnotesize\ttfamily  \textquotesingle{}list\mbox{[}float\mbox{]}\textquotesingle{} cdi.\+check\+Rend\+Poupanca (\begin{DoxyParamCaption}\item[{float}]{s }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{119 \textcolor{keyword}{def }checkRendPoupanca(s: float) -\/> \textcolor{stringliteral}{'list[float]'}:}
+\DoxyCodeLine{120     \textcolor{keywordflow}{if} s * 100 < 8.5:}
+\DoxyCodeLine{121         \textcolor{keywordflow}{return} [(s * 100) * 0.70, year2month(s)]}
+\DoxyCodeLine{122     \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{123         \textcolor{keywordflow}{return} [6.17, 0.5]}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{125 \textcolor{comment}{\# calcula o rendimento da poupança}}
+\DoxyCodeLine{126 \textcolor{comment}{\# @param c é o capital investido}}
+\DoxyCodeLine{127 \textcolor{comment}{\# @param p é a taxa de juros anual da poupança}}
+\DoxyCodeLine{128 \textcolor{comment}{\# @param m é a quantidade de meses}}
+\DoxyCodeLine{129 \textcolor{comment}{\# @return o rendimento da poupança no período de tempo informado}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacecdi_aa808f680780e8795044fb7fafe93105f}\label{namespacecdi_aa808f680780e8795044fb7fafe93105f}} 
+\index{cdi@{cdi}!day2year@{day2year}}
+\index{day2year@{day2year}!cdi@{cdi}}
+\doxysubsubsection{\texorpdfstring{day2year()}{day2year()}}
+{\footnotesize\ttfamily  float cdi.\+day2year (\begin{DoxyParamCaption}\item[{float }]{d,  }\item[{int }]{wd = {\ttfamily 252} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{36 \textcolor{keyword}{def }day2year ( d : float , wd : int = 252) -\/> float:}
+\DoxyCodeLine{37     \textcolor{keywordflow}{return} 100 * jc (d , wd )}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 \textcolor{comment}{\# \# Converte uma taxa de juros anual para uma taxa mensal .}}
+\DoxyCodeLine{40 \textcolor{comment}{\#}}
+\DoxyCodeLine{41 \textcolor{comment}{\# @param a taxa de juros anual .}}
+\DoxyCodeLine{42 \textcolor{comment}{\# @return taxa de juros mensal dada a taxa anual ,}}
+\DoxyCodeLine{43 \textcolor{comment}{\# na forma de um percentual .}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacecdi_ac00b344b5f68fee133f7472ecef90c88}\label{namespacecdi_ac00b344b5f68fee133f7472ecef90c88}} 
+\index{cdi@{cdi}!dobraCapital@{dobraCapital}}
+\index{dobraCapital@{dobraCapital}!cdi@{cdi}}
+\doxysubsubsection{\texorpdfstring{dobraCapital()}{dobraCapital()}}
+{\footnotesize\ttfamily  \textquotesingle{}list\mbox{[}float\mbox{]}\textquotesingle{} cdi.\+dobra\+Capital (\begin{DoxyParamCaption}\item[{float}]{taxa\+Juros }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{159 \textcolor{keyword}{def }dobraCapital(taxaJuros: float) -\/> \textcolor{stringliteral}{'list[float]'}:}
+\DoxyCodeLine{160     aoAno = doublePrincipal(taxaJuros/100)}
+\DoxyCodeLine{161     aoMes = aoAno * 12}
+\DoxyCodeLine{162     \textcolor{keywordflow}{return} aoAno, aoMes}
+\DoxyCodeLine{163 }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacecdi_a6d04e3ff9de843a14c58019c89da6326}\label{namespacecdi_a6d04e3ff9de843a14c58019c89da6326}} 
+\index{cdi@{cdi}!doublePrincipal@{doublePrincipal}}
+\index{doublePrincipal@{doublePrincipal}!cdi@{cdi}}
+\doxysubsubsection{\texorpdfstring{doublePrincipal()}{doublePrincipal()}}
+{\footnotesize\ttfamily  float  cdi.\+double\+Principal (\begin{DoxyParamCaption}\item[{float }]{r }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{56 \textcolor{keyword}{def }doublePrincipal ( r : float ) -\/> float :}
+\DoxyCodeLine{57     \textcolor{keywordflow}{return} math . log (2 , 1 + r )}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 \textcolor{comment}{\# Converte uma taxa de juros mensal para uma taxa diária}}
+\DoxyCodeLine{61 \textcolor{comment}{\#}}
+\DoxyCodeLine{62 \textcolor{comment}{\# @param a taxa de juros mensal.}}
+\DoxyCodeLine{63 \textcolor{comment}{\# @return taxa de juros diária dada a taxa mensal,}}
+\DoxyCodeLine{64 \textcolor{comment}{\# na forma de um percentual.}}
+\DoxyCodeLine{65 }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacecdi_a01d1af7e7956bc868161ad5f08809105}\label{namespacecdi_a01d1af7e7956bc868161ad5f08809105}} 
+\index{cdi@{cdi}!help@{help}}
+\index{help@{help}!cdi@{cdi}}
+\doxysubsubsection{\texorpdfstring{help()}{help()}}
+{\footnotesize\ttfamily def cdi.\+help (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{164 \textcolor{keyword}{def }help():}
+\DoxyCodeLine{165     print(\textcolor{stringliteral}{"{}Usage ./ cdi . py -\/c [ capital ] -\/a [ CDI anual ] -\/s [ Selic ]"{}} +}
+\DoxyCodeLine{166     \textcolor{stringliteral}{"{} -\/i [ alíquota IR ] -\/t [ taxa CDI ] -\/m [ "{}}\textcolor{stringliteral}{"{}meses ] -\/h [ help ]"{}})    }
+\DoxyCodeLine{167 \textcolor{comment}{\# \# Calcula o montante final , imposto , rendimento e}}
+\DoxyCodeLine{168 \textcolor{comment}{\# rentabilidade equivalente .}}
+\DoxyCodeLine{169 \textcolor{comment}{\#}}
+\DoxyCodeLine{170 \textcolor{comment}{\# @param c capital}}
+\DoxyCodeLine{171 \textcolor{comment}{\# @param cdi taxa cdi anual}}
+\DoxyCodeLine{172 \textcolor{comment}{\# @param p taxa poupança anual = 0.70 * selic}}
+\DoxyCodeLine{173 \textcolor{comment}{\# @param t rentabilidade da aplicação em função do CDI}}
+\DoxyCodeLine{174 \textcolor{comment}{\# @param i alíquota do imposto de renda}}
+\DoxyCodeLine{175 \textcolor{comment}{\# @param m meses}}
+\DoxyCodeLine{176 \textcolor{comment}{\# @return}}
+\DoxyCodeLine{177 \textcolor{comment}{\# -\/ montante da aplicação ,}}
+\DoxyCodeLine{178 \textcolor{comment}{\# -\/ montante poupança ,}}
+\DoxyCodeLine{179 \textcolor{comment}{\# -\/ imposto de renda retido ,}}
+\DoxyCodeLine{180 \textcolor{comment}{\# -\/ rendimento em m meses (\%) ,}}
+\DoxyCodeLine{181 \textcolor{comment}{\# -\/ rendimento em m meses ,}}
+\DoxyCodeLine{182 \textcolor{comment}{\# -\/ rendimento líquido em 1 m ês ,}}
+\DoxyCodeLine{183 \textcolor{comment}{\# -\/ rentabilidade para igualar poupança (\%) CDI}}
+\DoxyCodeLine{184 \textcolor{comment}{\#}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacecdi_a8328714d1771f15b835ec4467abb5336}\label{namespacecdi_a8328714d1771f15b835ec4467abb5336}} 
+\index{cdi@{cdi}!jc@{jc}}
+\index{jc@{jc}!cdi@{cdi}}
+\doxysubsubsection{\texorpdfstring{jc()}{jc()}}
+{\footnotesize\ttfamily  float  cdi.\+jc (\begin{DoxyParamCaption}\item[{float }]{r,  }\item[{int }]{t,  }\item[{int }]{n = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{27 \textcolor{keyword}{def }jc (r : float , t : int , n : int = 1) -\/> float :}
+\DoxyCodeLine{28     \textcolor{keywordflow}{return} (1 + r / float ( n ))**( n * t ) -\/ 1}
+\DoxyCodeLine{29 \textcolor{comment}{\# \# Converte uma taxa diária para uma taxa anual .}}
+\DoxyCodeLine{30 \textcolor{comment}{\# Em matemática financeira , consideramos 252 dias por ano .}}
+\DoxyCodeLine{31 \textcolor{comment}{\#}}
+\DoxyCodeLine{32 \textcolor{comment}{\# @param d taxa de juros diária .}}
+\DoxyCodeLine{33 \textcolor{comment}{\# @param wd número de dias úteis por ano .}}
+\DoxyCodeLine{34 \textcolor{comment}{\# @return taxa de juros anual dada a taxa diária ,}}
+\DoxyCodeLine{35 \textcolor{comment}{\# na forma de um percentual .}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacecdi_a5a91e0099d5022b47591d0020a15f007}\label{namespacecdi_a5a91e0099d5022b47591d0020a15f007}} 
+\index{cdi@{cdi}!liquidoBruto@{liquidoBruto}}
+\index{liquidoBruto@{liquidoBruto}!cdi@{cdi}}
+\doxysubsubsection{\texorpdfstring{liquidoBruto()}{liquidoBruto()}}
+{\footnotesize\ttfamily  float cdi.\+liquido\+Bruto (\begin{DoxyParamCaption}\item[{float}]{c,  }\item[{int}]{m,  }\item[{float}]{t,  }\item[{float}]{a }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{109 \textcolor{keyword}{def }liquidoBruto(c: float, m: int, t: float, a: float) -\/> float:}
+\DoxyCodeLine{110     rentabilidadeAplicacao = rentabilidade(t, a)}
+\DoxyCodeLine{111     liquiBruto = c * (1 + year2month(rentabilidadeAplicacao)/100) ** m}
+\DoxyCodeLine{112     \textcolor{keywordflow}{return} liquiBruto}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{114 \textcolor{comment}{\# faz a cheacagem da taxa de juros da poupança em,}}
+\DoxyCodeLine{115 \textcolor{comment}{\# comparação a selic.}}
+\DoxyCodeLine{116 \textcolor{comment}{\# @param s é a taxa de juros da selic ao ano}}
+\DoxyCodeLine{117 \textcolor{comment}{\# @return lista com 2 valores o primeiro é a taxa ao ano,}}
+\DoxyCodeLine{118 \textcolor{comment}{\# e a segunda a taxa ao mes}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacecdi_a53c3e3f648a0d940f74b348c456e9ecd}\label{namespacecdi_a53c3e3f648a0d940f74b348c456e9ecd}} 
+\index{cdi@{cdi}!main@{main}}
+\index{main@{main}!cdi@{cdi}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily def cdi.\+main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{199 \textcolor{keyword}{def }main():}
+\DoxyCodeLine{200     \textcolor{keywordflow}{try}:}
+\DoxyCodeLine{201         \textcolor{comment}{\# print(sys.argv)}}
+\DoxyCodeLine{202         opts, remainder = getopt.gnu\_getopt(sys.argv[1:], \textcolor{stringliteral}{"{}hc:va:vs:vi:vt:vm:v"{}}, [\textcolor{stringliteral}{"{}help"{}}, \textcolor{stringliteral}{"{}c="{}}, \textcolor{stringliteral}{"{}i="{}}, \textcolor{stringliteral}{"{}t="{}}, \textcolor{stringliteral}{"{}a="{}}, \textcolor{stringliteral}{"{}s="{}}])}
+\DoxyCodeLine{203 }
+\DoxyCodeLine{204     \textcolor{keywordflow}{except} getopt.GetoptError \textcolor{keyword}{as} err:}
+\DoxyCodeLine{205         \textcolor{comment}{\# print help information and exit:}}
+\DoxyCodeLine{206         print(err)  \textcolor{comment}{\# will print something like "{}option -\/a not recognized"{}}}
+\DoxyCodeLine{207         help()}
+\DoxyCodeLine{208         sys.exit(2)}
+\DoxyCodeLine{209 }
+\DoxyCodeLine{210     c = \textcolor{keywordtype}{None}    \textcolor{comment}{\#capital}}
+\DoxyCodeLine{211     a = \textcolor{keywordtype}{None}    \textcolor{comment}{\#taxa cdi anual}}
+\DoxyCodeLine{212     p = \textcolor{keywordtype}{None}    \textcolor{comment}{\#taxa poupança anual = 0.70 * selic}}
+\DoxyCodeLine{213     t = \textcolor{keywordtype}{None}    \textcolor{comment}{\# rentabilidade da aplicação em função do CDI}}
+\DoxyCodeLine{214     i = \textcolor{keywordtype}{None}    \textcolor{comment}{\#alíquota do imposto de renda}}
+\DoxyCodeLine{215     m = 1       \textcolor{comment}{\#meses (padrao 1 se nao passado como arg)}}
+\DoxyCodeLine{216     s = \textcolor{keywordtype}{None}    \textcolor{comment}{\# taxa Selic}}
+\DoxyCodeLine{217     verbose = \textcolor{keyword}{False}}
+\DoxyCodeLine{218 }
+\DoxyCodeLine{219     \textcolor{keywordflow}{for} opt, arg \textcolor{keywordflow}{in} opts:}
+\DoxyCodeLine{220         \textcolor{comment}{\# print("{}opt"{}, opt, "{}arg"{}, arg)}}
+\DoxyCodeLine{221 }
+\DoxyCodeLine{222         \textcolor{keywordflow}{if} opt \textcolor{keywordflow}{in} (\textcolor{stringliteral}{"{}-\/h"{}}, \textcolor{stringliteral}{"{}-\/-\/help"{}}):}
+\DoxyCodeLine{223             help()}
+\DoxyCodeLine{224             sys.exit()}
+\DoxyCodeLine{225         \textcolor{keywordflow}{elif} opt \textcolor{keywordflow}{in} (\textcolor{stringliteral}{"{}-\/c"{}}, \textcolor{stringliteral}{"{}-\/-\/c"{}}):}
+\DoxyCodeLine{226             c = float(arg)}
+\DoxyCodeLine{227         \textcolor{keywordflow}{elif} opt \textcolor{keywordflow}{in} (\textcolor{stringliteral}{"{}-\/a"{}}, \textcolor{stringliteral}{"{}-\/-\/a"{}}):}
+\DoxyCodeLine{228             a = float(arg)}
+\DoxyCodeLine{229         \textcolor{keywordflow}{elif} opt \textcolor{keywordflow}{in} (\textcolor{stringliteral}{"{}-\/s"{}}, \textcolor{stringliteral}{"{}-\/-\/s"{}}):}
+\DoxyCodeLine{230             s = float(arg)}
+\DoxyCodeLine{231         \textcolor{keywordflow}{elif} opt \textcolor{keywordflow}{in} (\textcolor{stringliteral}{"{}-\/i"{}}, \textcolor{stringliteral}{"{}-\/-\/i"{}}):}
+\DoxyCodeLine{232             i = float(arg)}
+\DoxyCodeLine{233         \textcolor{keywordflow}{elif} opt \textcolor{keywordflow}{in} (\textcolor{stringliteral}{"{}-\/t"{}}, \textcolor{stringliteral}{"{}-\/-\/t"{}}):}
+\DoxyCodeLine{234             t = float(arg)}
+\DoxyCodeLine{235         \textcolor{keywordflow}{elif} opt \textcolor{keywordflow}{in} (\textcolor{stringliteral}{"{}-\/m"{}}, \textcolor{stringliteral}{"{}-\/-\/m"{}}):}
+\DoxyCodeLine{236             m = int(arg)}
+\DoxyCodeLine{237         \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{238             \textcolor{keyword}{assert} \textcolor{keyword}{False}, \textcolor{stringliteral}{"{}unhandled option"{}}}
+\DoxyCodeLine{239 }
+\DoxyCodeLine{240     print(f\textcolor{stringliteral}{'\(\backslash\)nCapital = \$\{c:.2f\}'})}
+\DoxyCodeLine{241     print(\textcolor{stringliteral}{"{}Taxa Selic = "{}} + str(s * 100) + \textcolor{stringliteral}{"{}\%"{}})}
+\DoxyCodeLine{242     print(f\textcolor{stringliteral}{'CDI = \{str(a*100)\}\% ao ano = \{cdiAoMesDia(a)[0]:.4f\}\% ao mês = \{cdiAoMesDia(a)[1]:.6f\}\% ao dia'})}
+\DoxyCodeLine{243     poupancaAoAno, poupancaAoMes = checkRendPoupanca(s)}
+\DoxyCodeLine{244     print(f\textcolor{stringliteral}{'Taxa Poup = \{poupancaAoAno\}\% ao ano = \{poupancaAoMes:.4f\}\% ao mês'})}
+\DoxyCodeLine{245 }
+\DoxyCodeLine{246     print(f\textcolor{stringliteral}{'\(\backslash\)nIR = \{i\}\%'}, \textcolor{stringliteral}{"{}\(\backslash\)n"{}})}
+\DoxyCodeLine{247 }
+\DoxyCodeLine{248     print(f\textcolor{stringliteral}{'Rentabilidade = \{t:.1f\}\% CDI = \{rentabilidade(t, a)*100:.2f\}\%'})}
+\DoxyCodeLine{249     print(f\textcolor{stringliteral}{'Com impostos = \{rentabilida\_com\_impostos(t, a, i)[0]:.2f\}\% CDI = \{rentabilida\_com\_impostos(t, a, i)[1]:.2f\}\%'})}
+\DoxyCodeLine{250 }
+\DoxyCodeLine{251     print(f\textcolor{stringliteral}{'\(\backslash\)nMeses = \{m\}\(\backslash\)n'})}
+\DoxyCodeLine{252 }
+\DoxyCodeLine{253     igualarPoupCdi, rendiEmMMeses, difeEMMmeses, imposto, montante\_aplicacao, montante\_poupanca = CDB(c, a, poupancaAoAno, t, i, m)}
+\DoxyCodeLine{254     print(f\textcolor{stringliteral}{'Montante Aplicação = \$\{montante\_aplicacao:.2f\}'})}
+\DoxyCodeLine{255     print(f\textcolor{stringliteral}{'Montante Poupança = \$\{montante\_poupanca:.2f\}'})}
+\DoxyCodeLine{256     print(f\textcolor{stringliteral}{'Apl -\/ Poup (\{m\} meses) = \$\{montante\_aplicacao -\/ montante\_poupanca:.2f\}'})}
+\DoxyCodeLine{257     print(f\textcolor{stringliteral}{'Imposto = \$\{imposto:.4f\}'})}
+\DoxyCodeLine{258     print(f\textcolor{stringliteral}{'Rendimento em \{m\} meses = \{rendiEmMMeses:.4f\}\%'})}
+\DoxyCodeLine{259 }
+\DoxyCodeLine{260     print(f\textcolor{stringliteral}{'\(\backslash\)nAp1 -\/ Poup (\{m\} meses) = \{difeEMMmeses:.4f\}\%'})}
+\DoxyCodeLine{261     print(f\textcolor{stringliteral}{'Apl = Poup = \{igualarPoupCdi:.2f\}\% CDI'})}
+\DoxyCodeLine{262     rentaAnualApl = rentabilida\_com\_impostos(t, a, i)[1]}
+\DoxyCodeLine{263     print(f\textcolor{stringliteral}{'Tempo 2 x Poupança = \{dobraCapital(poupancaAoAno)[0]:.2f\} anos = \{dobraCapital(poupancaAoAno)[1]:.2f\} meses'})}
+\DoxyCodeLine{264     print(f\textcolor{stringliteral}{'Tempo 2 x Aplicação = \{dobraCapital(rentaAnualApl)[0]:.2f\} anos = \{dobraCapital(rentaAnualApl)[1]:.2f\} meses'})}
+\DoxyCodeLine{265 }
+\DoxyCodeLine{266 }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacecdi_addb0dc08b609336db4af12d6070bf543}\label{namespacecdi_addb0dc08b609336db4af12d6070bf543}} 
+\index{cdi@{cdi}!montanteLiquidoAplicacao@{montanteLiquidoAplicacao}}
+\index{montanteLiquidoAplicacao@{montanteLiquidoAplicacao}!cdi@{cdi}}
+\doxysubsubsection{\texorpdfstring{montanteLiquidoAplicacao()}{montanteLiquidoAplicacao()}}
+{\footnotesize\ttfamily  float cdi.\+montante\+Liquido\+Aplicacao (\begin{DoxyParamCaption}\item[{float}]{c,  }\item[{int}]{m,  }\item[{float}]{t,  }\item[{float}]{i,  }\item[{float}]{a }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{99 \textcolor{keyword}{def }montanteLiquidoAplicacao(c: float, m: int, t: float, i: float, a: float) -\/> float:}
+\DoxyCodeLine{100     montante = liquidoBruto(c, m, t, a)}
+\DoxyCodeLine{101     \textcolor{keywordflow}{return} aplicarImpostoRenda(montante, c, i)}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{103 \textcolor{comment}{\# Metodo que calcula o liquido bruto da aplicação}}
+\DoxyCodeLine{104 \textcolor{comment}{\# @param c é o capital investido}}
+\DoxyCodeLine{105 \textcolor{comment}{\# @param m é a quantidade de meses}}
+\DoxyCodeLine{106 \textcolor{comment}{\# @param t é o rendimento em \%}}
+\DoxyCodeLine{107 \textcolor{comment}{\# @param a é a taxa do cdi \#ATENÇÂO ++++++++++++++++==========}}
+\DoxyCodeLine{108 \textcolor{comment}{\# @return liquido Bruto da aplicação}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacecdi_acc1acbd719178ad753dd33359907944c}\label{namespacecdi_acc1acbd719178ad753dd33359907944c}} 
+\index{cdi@{cdi}!porcenDifencaEmMeses@{porcenDifencaEmMeses}}
+\index{porcenDifencaEmMeses@{porcenDifencaEmMeses}!cdi@{cdi}}
+\doxysubsubsection{\texorpdfstring{porcenDifencaEmMeses()}{porcenDifencaEmMeses()}}
+{\footnotesize\ttfamily  \textquotesingle{}list\mbox{[}float\mbox{]}\textquotesingle{} cdi.\+porcen\+Difenca\+Em\+Meses (\begin{DoxyParamCaption}\item[{float}]{c,  }\item[{float}]{mont\+Aplica,  }\item[{float}]{mont\+Poupan }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{150 \textcolor{keyword}{def }porcenDifencaEmMeses(c: float, montAplica: float, montPoupan: float) -\/> \textcolor{stringliteral}{'list[float]'}:}
+\DoxyCodeLine{151     rendMeses = ((montAplica -\/ c) / 100) * 1000 / 100}
+\DoxyCodeLine{152     diferencaMMeses = ((montAplica -\/ montPoupan) / 100) * c/100}
+\DoxyCodeLine{153     \textcolor{keywordflow}{return} rendMeses, diferencaMMeses}
+\DoxyCodeLine{154 }
+\DoxyCodeLine{155 \textcolor{comment}{\# Metodo que utiliza de outro metodo para saber em quanto tempo}}
+\DoxyCodeLine{156 \textcolor{comment}{\# vou dobra o capital investido}}
+\DoxyCodeLine{157 \textcolor{comment}{\# @param taxaJuros porcentegem de rendimento ao ano}}
+\DoxyCodeLine{158 \textcolor{comment}{\# @return retorna o tempo total em anos e meses}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacecdi_ae2aa02e5f5d2199e52ae82f7fbcb1644}\label{namespacecdi_ae2aa02e5f5d2199e52ae82f7fbcb1644}} 
+\index{cdi@{cdi}!rendimentoPoupanca@{rendimentoPoupanca}}
+\index{rendimentoPoupanca@{rendimentoPoupanca}!cdi@{cdi}}
+\doxysubsubsection{\texorpdfstring{rendimentoPoupanca()}{rendimentoPoupanca()}}
+{\footnotesize\ttfamily  float cdi.\+rendimento\+Poupanca (\begin{DoxyParamCaption}\item[{float}]{c,  }\item[{float}]{p,  }\item[{int}]{m }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{130 \textcolor{keyword}{def }rendimentoPoupanca(c: float, p: float, m: int) -\/> float:}
+\DoxyCodeLine{131     \textcolor{comment}{\# convertendo o rendimento de anos para meses}}
+\DoxyCodeLine{132     p = year2month(p/100)}
+\DoxyCodeLine{133     \textcolor{keywordflow}{return} c * (1 + (p/100)) ** m}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{135 \textcolor{comment}{\# calcula a taxa do cdi ao mes e ao dia}}
+\DoxyCodeLine{136 \textcolor{comment}{\# @param a é a taxa do cdi ao ano}}
+\DoxyCodeLine{137 \textcolor{comment}{\# @return a taxa do cdi ao mes e ao dia}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacecdi_aa77d10a6363bb132fa35a44f4129f3c5}\label{namespacecdi_aa77d10a6363bb132fa35a44f4129f3c5}} 
+\index{cdi@{cdi}!rentabilida\_com\_impostos@{rentabilida\_com\_impostos}}
+\index{rentabilida\_com\_impostos@{rentabilida\_com\_impostos}!cdi@{cdi}}
+\doxysubsubsection{\texorpdfstring{rentabilida\_com\_impostos()}{rentabilida\_com\_impostos()}}
+{\footnotesize\ttfamily  \textquotesingle{}list\mbox{[}float\mbox{]}\textquotesingle{} cdi.\+rentabilida\+\_\+com\+\_\+impostos (\begin{DoxyParamCaption}\item[{float}]{t,  }\item[{float}]{a,  }\item[{float}]{i }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{82 \textcolor{keyword}{def }rentabilida\_com\_impostos(t: float, a: float, i: float) -\/> \textcolor{stringliteral}{'list[float]'}:}
+\DoxyCodeLine{83     \textcolor{keywordflow}{return} [t*(1-\/(i/100)), t*a*(1-\/(i/100))]}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85 \textcolor{comment}{\# metodo para aplicar o imposto de renda ao liquido bruto da aplicação}}
+\DoxyCodeLine{86 \textcolor{comment}{\# @param montante é o liquido bruto do rendimento}}
+\DoxyCodeLine{87 \textcolor{comment}{\# @param c é o capital investido}}
+\DoxyCodeLine{88 \textcolor{comment}{\# @param i é a aliquota do imposto de renda}}
+\DoxyCodeLine{89 \textcolor{comment}{\# @return o rendimento bruto descontando o imposto de renda}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacecdi_adad598a732026cdaad314aac1041cb25}\label{namespacecdi_adad598a732026cdaad314aac1041cb25}} 
+\index{cdi@{cdi}!rentabilidade@{rentabilidade}}
+\index{rentabilidade@{rentabilidade}!cdi@{cdi}}
+\doxysubsubsection{\texorpdfstring{rentabilidade()}{rentabilidade()}}
+{\footnotesize\ttfamily  float cdi.\+rentabilidade (\begin{DoxyParamCaption}\item[{float}]{t,  }\item[{float}]{a }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{74 \textcolor{keyword}{def }rentabilidade(t: float, a: float) -\/> float:}
+\DoxyCodeLine{75     \textcolor{keywordflow}{return} (t*a) / 100}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77 \textcolor{comment}{\# metodo que calcula a rentabilidade com Impostos}}
+\DoxyCodeLine{78 \textcolor{comment}{\# @param t é a rentabilidade}}
+\DoxyCodeLine{79 \textcolor{comment}{\# @param a é a taxa do cdi}}
+\DoxyCodeLine{80 \textcolor{comment}{\# @param i é o alíquota do imposto de renda}}
+\DoxyCodeLine{81 \textcolor{comment}{\# @return rentabilidade com impostos e a porcentagem do cdi}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacecdi_ae726f68f3496cf8f5073072fa80a04ab}\label{namespacecdi_ae726f68f3496cf8f5073072fa80a04ab}} 
+\index{cdi@{cdi}!year2day@{year2day}}
+\index{year2day@{year2day}!cdi@{cdi}}
+\doxysubsubsection{\texorpdfstring{year2day()}{year2day()}}
+{\footnotesize\ttfamily  float cdi.\+year2day (\begin{DoxyParamCaption}\item[{float}]{a }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{66 \textcolor{keyword}{def }year2day(a: float) -\/> float:}
+\DoxyCodeLine{67     \textcolor{keywordflow}{return} 100 * jc(a, 1 / 252.0)   }
+\DoxyCodeLine{68 \textcolor{comment}{\# Metodo que calcula a rentabilidade em função do cdi}}
+\DoxyCodeLine{69 \textcolor{comment}{\#}}
+\DoxyCodeLine{70 \textcolor{comment}{\# @param t rentabilidade do rendimento }}
+\DoxyCodeLine{71 \textcolor{comment}{\# @param a taxa de 100\% cdi ao ano }}
+\DoxyCodeLine{72 \textcolor{comment}{\# @return rentabilidade anual em cima do cdi}}
+\DoxyCodeLine{73 }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacecdi_a91abac72d6b6011e6215408c5380d23f}\label{namespacecdi_a91abac72d6b6011e6215408c5380d23f}} 
+\index{cdi@{cdi}!year2month@{year2month}}
+\index{year2month@{year2month}!cdi@{cdi}}
+\doxysubsubsection{\texorpdfstring{year2month()}{year2month()}}
+{\footnotesize\ttfamily  float cdi.\+year2month (\begin{DoxyParamCaption}\item[{float }]{a }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{44 \textcolor{keyword}{def }year2month ( a : float ) -\/> float:}
+\DoxyCodeLine{45     \textcolor{keywordflow}{return} 100 * jc (a , 1 / 12.0)}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{comment}{\# \# Calcula log1+r 2 ( logaritmo de 2 na base 1 + r).}}
+\DoxyCodeLine{48 \textcolor{comment}{\# Pode ser aproximado por 72/(100 ∗ r).}}
+\DoxyCodeLine{49 \textcolor{comment}{\#}}
+\DoxyCodeLine{50 \textcolor{comment}{\# É usada para calcular o tempo necess á rio}}
+\DoxyCodeLine{51 \textcolor{comment}{\# para dobrar o principal quando sujeito uma taxa de juros dada .}}
+\DoxyCodeLine{52 \textcolor{comment}{\#}}
+\DoxyCodeLine{53 \textcolor{comment}{\# @param r taxa de juros nominal .}}
+\DoxyCodeLine{54 \textcolor{comment}{\# @return tempo para dobrar o principal .}}
+\DoxyCodeLine{55 \textcolor{comment}{\#}}
+
+\end{DoxyCode}
